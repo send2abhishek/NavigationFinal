@@ -14,10 +14,10 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="6">
 
-                                <Image Source="{Binding Image}" />
+                                <Image Source="icons8_user.png" />
                                     <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                                    <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold"/>
-                                    <Label Text="{Binding SecName}" FontSize="Small"/>
+                                    <Label Text="{Binding EmpName}" FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Degination}" FontSize="Small"/>
                                 </StackLayout>
 
                             </StackLayout>

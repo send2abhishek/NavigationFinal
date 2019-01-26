@@ -6,7 +6,7 @@
 
     <TabbedPage.ToolbarItems>
         <ToolbarItem Text="Settings"  Order="Secondary"/>
-        <ToolbarItem Text="Add Item" Icon="icons8_plus.png"  Order="Primary"/>
+        <ToolbarItem Text="Add Item" Icon="icons8_plus.png"  Order="Primary" Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
 
 

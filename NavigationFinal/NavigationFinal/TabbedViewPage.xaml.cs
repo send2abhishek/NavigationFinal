@@ -40,6 +40,13 @@ namespace NavigationFinal
 
         }
 
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new EmployeeDetails() {BindingContext=new Employee() });
+
+        }
+
         //private void OnChange(object sender, ToggledEventArgs e)
         //{
 
@@ -48,6 +55,6 @@ namespace NavigationFinal
         //    app.NotificationEnabled = notoficationEnabled.On;
         //}
 
-        
+
     }
 }

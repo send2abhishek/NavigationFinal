@@ -12,11 +12,13 @@ namespace NavigationFinal
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListDetailsPage : ContentPage
 	{
-		public ListDetailsPage (Contacts contacts)
+		public ListDetailsPage ()
 		{
 			InitializeComponent ();
 
-            BindingContext = contacts;
-		}
+            //BindingContext = contacts;
+            
+
+        }
 	}
 }

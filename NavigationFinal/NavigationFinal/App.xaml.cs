@@ -9,11 +9,25 @@ namespace NavigationFinal
     {
         private const string TitleKey = "Name";
         private const string NotificationEnable = "NotificationEnable";
+        static EmployeeDatabase database;
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new TabbedViewPage());
+        }
+
+        public static EmployeeDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new EmployeeDatabase(DependencyService.Get<ILocalFileHelper>()
+                        .getLocalFilePath("Employee.db1"));
+                }
+                return database;
+            }
         }
 
         protected override void OnStart()
