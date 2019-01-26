@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:NavigationFinal"
+             x:Class="NavigationFinal.TabbedViewPage">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Settings"  Order="Secondary"/>
+        <ToolbarItem Text="Add Item" Icon="icons8_plus.png"  Order="Primary"/>
+    </TabbedPage.ToolbarItems>
+
+
+    <local:MasterPage Title="ListView" Icon="icons8_page_1.png" />
+    <ContentPage Title="Page2" Icon="icons8_page_2.png">
+
+        <Label Text="Page 2" HorizontalOptions="Center" VerticalOptions="Center" />
+
+    </ContentPage>
+
+
+</TabbedPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationFinal.MasterPage" Title="Navigation Excercise" >
+       
+        <ContentPage.Content>
+        
+        <StackLayout>
+            <ListView x:Name="myList" HasUnevenRows="True" ItemSelected="MyList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="6">
+
+                                <Image Source="{Binding Image}" />
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="{Binding SecName}" FontSize="Small"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
+  
