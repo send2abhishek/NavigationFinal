@@ -7,6 +7,8 @@ namespace NavigationFinal
 {
     public partial class App : Application
     {
+        private const string TitleKey = "Name";
+        private const string NotificationEnable = "NotificationEnable";
         public App()
         {
             InitializeComponent();
@@ -27,6 +29,36 @@ namespace NavigationFinal
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public string Title
+        {
+            get
+            {
+                if (Properties.ContainsKey(TitleKey))
+                    return Properties[TitleKey].ToString();
+                return "";
+            }
+
+            set
+            {
+                Properties[TitleKey] = value;
+            }
+        }
+
+        public bool NotificationEnabled
+        {
+
+            get
+            {
+                if (Properties.ContainsKey(NotificationEnable))
+                    return (bool)Properties[NotificationEnable];
+                return false;
+            }
+            set
+            {
+                Properties[NotificationEnable] = value;
+            }
         }
     }
 }

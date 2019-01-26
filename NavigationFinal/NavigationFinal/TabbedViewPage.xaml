@@ -11,9 +11,58 @@
 
 
     <local:MasterPage Title="ListView" Icon="icons8_page_1.png" />
+    
     <ContentPage Title="Page2" Icon="icons8_page_2.png">
 
-        <Label Text="Page 2" HorizontalOptions="Center" VerticalOptions="Center" />
+        <StackLayout Margin="12">
+            <Switch IsToggled="True" x:Name="SwitchTest"/>
+            <Label Text="content"
+                   IsVisible="{Binding Source={x:Reference SwitchTest },Path=IsToggled}" />
+
+            <Slider x:Name="slide" Minimum="0" Maximum="100" />
+            <Label Text="{Binding Source={x:Reference slide},Path=Value}" />
+
+            <Stepper x:Name="step" />
+            <Label Text="{Binding Source={x:Reference step},Path=Value}" />
+        </StackLayout>
+
+    </ContentPage>
+    
+    <ContentPage Title="Page3" Icon="icons8_page_2.png">
+
+        <StackLayout Margin="6" >
+            <Entry Keyboard="Numeric" Placeholder="Enter Name" TextChanged="Entry_TextChanged" />
+            <Entry IsPassword="True" Placeholder="Password" />
+
+            <Label x:Name="label1" />
+
+
+            <Picker x:Name="pick" Title="Contact Method" SelectedIndexChanged="Pick_SelectedIndexChanged">
+
+                <Picker.Items>
+                    <x:String>Sms</x:String>
+                    <x:String>Email</x:String>
+                </Picker.Items>
+            </Picker>
+            
+        </StackLayout>
+
+        
+    </ContentPage>
+
+    <ContentPage Title="Page4" Icon="icons8_page_2.png">
+
+
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <EntryCell x:Name="title" Text="{Binding Title}" Label="Title" 
+                               Placeholder="Enter a item"  />
+                    <SwitchCell x:Name="notoficationEnabled" Text="Notification"
+                                On="{Binding NotificationEnabled}"  />
+                </TableSection>
+            </TableRoot>
+        </TableView>
 
     </ContentPage>
 

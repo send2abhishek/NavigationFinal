@@ -7,9 +7,9 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Abhishek!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Switch IsToggled="True" x:Name="SwitchTest"/>
+            <Label Text="content"
+                   IsVisible="{Binding Source={x:Reference SwitchTest },Path=IsToggled}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
